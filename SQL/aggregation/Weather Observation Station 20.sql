@@ -1,5 +1,10 @@
 -- https://www.hackerrank.com/challenges/weather-observation-station-20/problem
 
+/*
+There is no median() function in t-sql. 
+Using offest / fetch we move to the row that is one before half the count, then take the next one or two rows depending on whether the count was odd or even. 
+*/
+
 DECLARE @median DECIMAL(20, 4);
 DECLARE @count BIGINT = (SELECT COUNT(*) FROM Station);
  
